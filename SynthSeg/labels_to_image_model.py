@@ -17,8 +17,8 @@ License.
 # python imports
 import numpy as np
 import tensorflow as tf
-import keras.layers as KL
-from keras.models import Model
+import tensorflow.keras.layers as KL
+from tensorflow.keras.models import Model
 
 # third-party imports
 from ext.lab2im import utils
@@ -174,10 +174,10 @@ def labels_to_image_model(labels_shape,
     if crop_shape != labels_shape:
         labels = layers.RandomCrop(crop_shape)(labels)
 
-    # flipping
-    if flipping:
-        assert aff is not None, 'aff should not be None if flipping is True'
-        labels = layers.RandomFlip(get_ras_axes(aff, n_dims)[0], True, generation_labels, n_neutral_labels)(labels)
+    # # flipping
+    # if flipping:
+    #     assert aff is not None, 'aff should not be None if flipping is True'
+    #     labels = layers.RandomFlip(get_ras_axes(aff, n_dims)[0], True, generation_labels, n_neutral_labels)(labels)
 
     # build synthetic image
     image = layers.SampleConditionalGMM(generation_labels)([labels, means_input, stds_input])

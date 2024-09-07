@@ -24,7 +24,8 @@ from ext.lab2im import utils
 from SynthSeg.brain_generator import BrainGenerator
 
 # generate an image from the label map.
-brain_generator = BrainGenerator('../../data/training_label_maps/training_seg_01.nii.gz')
+# brain_generator = BrainGenerator('../../data/training_label_maps/training_seg_01.nii.gz')
+brain_generator = BrainGenerator('./data/ab2/test_label.nii.gz')
 im, lab = brain_generator.generate_brain()
 
 # save output image and label map under SynthSeg/generated_examples
