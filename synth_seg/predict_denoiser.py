@@ -22,8 +22,8 @@ import tensorflow.keras.layers as KL
 from tensorflow.keras.models import Model
 
 # project imports
-from SynthSeg import evaluate
-from SynthSeg.predict import write_csv, postprocess
+from synth_seg import evaluate
+from synth_seg.predict import write_csv, postprocess
 
 # third-party imports
 from ext.lab2im import edit_volumes

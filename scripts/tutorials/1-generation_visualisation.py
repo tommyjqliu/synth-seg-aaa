@@ -21,7 +21,7 @@ License.
 
 
 from ext.lab2im import utils
-from SynthSeg.brain_generator import BrainGenerator
+from synth_seg.brain_generator import BrainGenerator
 
 # generate an image from the label map.
 # brain_generator = BrainGenerator('../../data/training_label_maps/training_seg_01.nii.gz')

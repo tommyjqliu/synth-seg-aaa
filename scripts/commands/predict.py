@@ -16,7 +16,7 @@ License.
 
 # imports
 from argparse import ArgumentParser
-from SynthSeg.predict import predict
+from synth_seg.predict import predict
 
 parser = ArgumentParser()
 

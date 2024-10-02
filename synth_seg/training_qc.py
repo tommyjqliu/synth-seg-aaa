@@ -31,7 +31,7 @@ from tensorflow.keras.optimizers import Adam
 from inspect import getmembers, isclass
 
 # project imports
-from SynthSeg import metrics_model as metrics
+from synth_seg import metrics_model as metrics
 
 # third-party imports
 from ext.lab2im import utils

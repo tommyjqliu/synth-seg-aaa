@@ -31,7 +31,7 @@ License.
 import os
 import numpy as np
 from ext.lab2im import utils
-from SynthSeg.brain_generator import BrainGenerator
+from synth_seg.brain_generator import BrainGenerator
 
 # script parameters
 n_examples = 5  # number of examples to generate in this script

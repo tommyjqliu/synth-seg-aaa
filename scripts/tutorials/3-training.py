@@ -22,7 +22,7 @@ License.
 
 
 # project imports
-from SynthSeg.training import training
+from synth_seg.training import training
 
 
 # path training label maps

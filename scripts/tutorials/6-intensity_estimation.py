@@ -23,7 +23,7 @@ License.
 """
 
 
-from SynthSeg.estimate_priors import build_intensity_stats
+from synth_seg.estimate_priors import build_intensity_stats
 
 # ----------------------------------------------- simple uni-modal case ------------------------------------------------
 

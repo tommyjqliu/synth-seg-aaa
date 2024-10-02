@@ -25,8 +25,8 @@ import tensorflow.keras.backend as K
 from tensorflow.keras.models import Model
 
 # project imports
-from SynthSeg import evaluate
-from SynthSeg.predict import write_csv, get_flip_indices
+from synth_seg import evaluate
+from synth_seg.predict import write_csv, get_flip_indices
 
 # third-party imports
 from ext.lab2im import utils

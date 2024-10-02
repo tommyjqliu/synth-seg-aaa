@@ -22,7 +22,7 @@ import tensorflow.keras.layers as KL
 from tensorflow.keras.models import Model
 
 # project imports
-from SynthSeg import evaluate
+from synth_seg import evaluate
 
 # third-party imports
 from ext.lab2im import utils
