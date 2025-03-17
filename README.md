@@ -1,5 +1,7 @@
-# SynthSeg
+# UWA AAA SynthSeg
 
+# Archive
+## SynthSeg
 
 In this repository, we present SynthSeg, the first deep learning tool for segmentation of brain scans of
 any contrast and resolution. SynthSeg works out-of-the-box without any retraining, and is robust to:

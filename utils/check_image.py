@@ -16,8 +16,8 @@ def check_image(
 ):
     # Assume first image defines the dimensions
     def display_slice(**kwargs):
-        fig_width_per_img = 6  # Width per image
-        fig_height = 6  # Fixed height
+        fig_width_per_img = 4  # Width per image
+        fig_height = 4  # Fixed height
         fig, axes = plt.subplots(
             1, len(options), figsize=(fig_width_per_img * len(options), fig_height)
         )

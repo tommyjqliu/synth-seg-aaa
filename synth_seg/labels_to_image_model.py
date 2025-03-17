@@ -143,7 +143,7 @@ def labels_to_image_model(
     :param return_gradients: (optional) whether to return the synthetic image or the magnitude of its spatial gradient
     (computed with Sobel kernels).
     """
-
+    history = []
     # reformat resolutions
     labels_shape = utils.reformat_to_list(labels_shape)
     n_dims, _ = utils.get_dims(labels_shape)
@@ -192,10 +192,10 @@ def labels_to_image_model(
         nonlin_scale=nonlin_scale,
         inter_method="nearest",
     )(labels_input)
-
-    # cropping
-    if crop_shape != labels_shape:
-        labels = layers.RandomCrop(crop_shape)(labels)
+    history.append(labels)
+    # # cropping
+    # if crop_shape != labels_shape:
+    #     labels = layers.RandomCrop(crop_shape)(labels)
 
     # # flipping
     # if flipping:
@@ -206,16 +206,16 @@ def labels_to_image_model(
     image = layers.SampleConditionalGMM(generation_labels)(
         [labels, means_input, stds_input]
     )
-
+    history.append(image)
     # apply bias field
     if bias_field_std > 0:
         image = layers.BiasFieldCorruption(bias_field_std, bias_scale, False)(image)
-
+    history.append(image)
     # intensity augmentation
     image = layers.IntensityAugmentation(
         clip=300, normalise=True, gamma_std=0.5, separate_channels=True
     )(image)
-
+    history.append(image)
     # loop over channels
     channels = list()
     split = (
@@ -283,7 +283,7 @@ def labels_to_image_model(
 
     # build model (dummy layer enables to keep the labels when plugging this model to other models)
     image = KL.Lambda(lambda x: x[0], name="image_out")([image, labels])
-    brain_model = Model(inputs=list_inputs, outputs=[image, labels])
+    brain_model = Model(inputs=list_inputs, outputs=[image, labels, history])
 
     return brain_model
 

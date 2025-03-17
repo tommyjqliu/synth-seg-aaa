@@ -333,12 +333,12 @@ class BrainGenerator:
     def _build_brain_generator(self):
         while True:
             model_inputs = next(self.model_inputs_generator)
-            [image, labels] = self.labels_to_image_model.predict(model_inputs)
-            yield image, labels
+            [image, labels, history] = self.labels_to_image_model.predict(model_inputs)
+            yield image, labels, history
 
     def generate_brain(self):
         """call this method when an object of this class has been instantiated to generate new brains"""
-        (image, labels) = next(self.brain_generator)
+        (image, labels, hisroty) = next(self.brain_generator)
         # put back images in native space
         list_images = list()
         list_labels = list()
@@ -355,4 +355,4 @@ class BrainGenerator:
             )
         image = np.squeeze(np.stack(list_images, axis=0))
         labels = np.squeeze(np.stack(list_labels, axis=0))
-        return image, labels
+        return image, labels, hisroty

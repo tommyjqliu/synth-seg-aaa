@@ -33,3 +33,4 @@ SynthSeg/training_vae.py
 SynthSeg/validate_vae.py
 
 data
+nnUNet_raw
