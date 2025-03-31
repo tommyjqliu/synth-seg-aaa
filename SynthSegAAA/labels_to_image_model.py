@@ -98,7 +98,8 @@ def labels_to_image_model(labels_shape,
 
     # intensity augmentation
     image = layers.IntensityAugmentation(clip=300, normalise=True, gamma_std=.5, separate_channels=True)(image)
-    image = PerlinNoise(scale=10.0, octaves=6, persistence=0.5, lacunarity=2.0, amplitude=0.5)(image)
+
+    image = PerlinNoise(scale=30, octaves=6, persistence=0.5, lacunarity=2.0, amplitude=1)([image, labels])
 
     # loop over channels
     channels = list()
