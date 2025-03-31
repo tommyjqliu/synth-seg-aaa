@@ -9,8 +9,8 @@ def check_image(options: List[Dict]):
     options: list[
         dict[
             "title":str,
-            "image" : nib.Nifti1Image,
-            "overlay" : nib.Nifti1Image,
+            "image" : nib.Nifti1Image | np.ndarray,
+            "overlay" : nib.Nifti1Image | np.ndarray,
             "is_label":bool,
             "is_overlay_label":bool,
         ]
