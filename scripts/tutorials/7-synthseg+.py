@@ -20,9 +20,9 @@ distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, e
 implied. See the License for the specific language governing permissions and limitations under the
 License.
 """
-from synth_seg.training import training as training_s1
-from synth_seg.training_denoiser import training as training_d
-from synth_seg.training_group import training as training_s2
+from SynthSeg.training import training as training_s1
+from SynthSeg.training_denoiser import training as training_d
+from SynthSeg.training_group import training as training_s2
 
 import numpy as np
 

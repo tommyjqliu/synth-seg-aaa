@@ -15,7 +15,7 @@ License.
 
 
 from argparse import ArgumentParser
-from synth_seg.training import training
+from SynthSeg.training import training
 from ext.lab2im.utils import infer
 
 parser = ArgumentParser()

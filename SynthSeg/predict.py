@@ -19,12 +19,12 @@ import os
 import csv
 import numpy as np
 import tensorflow as tf
-import tensorflow.keras.layers as KL
-import tensorflow.keras.backend as K
-from tensorflow.keras.models import Model
+import keras.layers as KL
+import keras.backend as K
+from keras.models import Model
 
 # project imports
-from synth_seg import evaluate
+from SynthSeg import evaluate
 
 # third-party imports
 from ext.lab2im import utils

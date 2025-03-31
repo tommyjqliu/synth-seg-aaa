@@ -19,7 +19,7 @@ License: GPLv3
 import itertools
 import numpy as np
 import tensorflow as tf
-import tensorflow.keras.backend as K
+import keras.backend as K
 
 
 def interpn(vol, loc, interp_method='linear'):

@@ -1,9 +1,11 @@
+from typing import Dict, List
 import nibabel as nib
 import matplotlib.pyplot as plt
 from ipywidgets import interact, IntSlider
 
 
-def check_image(
+def check_image(options: List[Dict]):
+    """
     options: list[
         dict[
             "title":str,
@@ -13,7 +15,7 @@ def check_image(
             "is_overlay_label":bool,
         ]
     ]
-):
+    """
     # Assume first image defines the dimensions
     def display_slice(**kwargs):
         fig_width_per_img = 4  # Width per image

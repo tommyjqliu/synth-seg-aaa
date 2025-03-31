@@ -22,7 +22,7 @@ License.
 """
 
 # project imports
-from synth_seg.predict import predict
+from SynthSeg.predict import predict
 
 # paths to input/output files
 # Here we assume the availability of an image that we wish to segment with a model we have just trained.

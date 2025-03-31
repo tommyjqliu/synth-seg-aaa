@@ -23,14 +23,14 @@ License.
 import os
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras import models
-import tensorflow.keras.layers as KL
+from keras import models
+import keras.layers as KL
 
 # project imports
-from synth_seg import metrics_model as metrics
-from synth_seg.training import train_model
-from synth_seg.brain_generator import BrainGenerator
-from synth_seg.labels_to_image_model import get_shapes
+from SynthSeg import metrics_model as metrics
+from SynthSeg.training import train_model
+from SynthSeg.brain_generator import BrainGenerator
+from SynthSeg.labels_to_image_model import get_shapes
 
 # third-party imports
 from ext.lab2im import utils

@@ -20,17 +20,17 @@ License.
 
 # python imports
 import os
-from tensorflow import keras
+import keras
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras import models
-import tensorflow.keras.callbacks as KC
-from tensorflow.keras.optimizers import Adam
+from keras import models
+import keras.callbacks as KC
+from keras.optimizers import Adam
 from inspect import getmembers, isclass
 
 # project imports
-from synth_seg import metrics_model as metrics
-from synth_seg.brain_generator import BrainGenerator
+from SynthSeg import metrics_model as metrics
+from SynthSeg.brain_generator import BrainGenerator
 
 # third-party imports
 from ext.lab2im import utils, layers

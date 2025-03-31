@@ -20,13 +20,13 @@ import sys
 import traceback
 import numpy as np
 import tensorflow as tf
-import tensorflow.keras.layers as KL
-import tensorflow.keras.backend as K
-from tensorflow.keras.models import Model
+import keras.layers as KL
+import keras.backend as K
+from keras.models import Model
 
 # project imports
-from synth_seg import evaluate
-from synth_seg.predict import write_csv, get_flip_indices
+from SynthSeg import evaluate
+from SynthSeg.predict import write_csv, get_flip_indices
 
 # third-party imports
 from ext.lab2im import utils

@@ -25,7 +25,7 @@ synthseg_home = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(
 sys.path.append(synthseg_home)
 model_dir = os.path.join(synthseg_home, 'models')
 labels_dir = os.path.join(synthseg_home, 'data/labels_classes_priors')
-from synth_seg.predict_synthseg import predict
+from SynthSeg.predict_synthseg import predict
 
 
 # parse arguments

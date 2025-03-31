@@ -26,8 +26,8 @@ License.
 # python imports
 import numpy as np
 import tensorflow as tf
-import tensorflow.keras.layers as KL
-import tensorflow.keras.backend as K
+import keras.layers as KL
+import keras.backend as K
 from itertools import combinations
 
 # project imports
@@ -48,7 +48,7 @@ def blurring_sigma_for_downsampling(current_res, downsample_res, mult_coef=None,
     :return: standard deviation of the blurring masks given as the same type as downsample_res (list or tensor).
     """
 
-    if not tf.is_tensor(downsample_res) and not tf.keras.backend.is_keras_tensor(downsample_res):
+    if not tf.is_tensor(downsample_res):
 
         # get blurring resolution (min between downsample_res and thickness)
         current_res = np.array(current_res)
@@ -99,10 +99,15 @@ def gaussian_kernel(sigma, max_sigma=None, blur_range=None, separable=True):
     else:
         assert max_sigma is not None, 'max_sigma must be provided when sigma is given as a tensor'
         sigma_tens = sigma
-    shape = sigma_tens.shape
+    shape = sigma_tens.get_shape().as_list()
 
-    n_dims = shape[1]
-    batchsize = tf.split(tf.shape(sigma_tens), [1, -1])[0]
+    # get n_dims and batchsize
+    if shape[0] is not None:
+        n_dims = shape[0]
+        batchsize = None
+    else:
+        n_dims = shape[1]
+        batchsize = tf.split(tf.shape(sigma_tens), [1, -1])[0]
 
     # reformat max_sigma
     if max_sigma is not None:  # dynamic blurring
