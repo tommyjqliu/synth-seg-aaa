@@ -13,15 +13,15 @@ def generate_perline_label(
     min_cloud_size=1000,
     seed=42
 ):
-    print("Generating Perlin noise with parameters:")
-    print(f"Grid size: {grid_size}")
-    print(f"Scale: {scale}")
-    print(f"Octaves: {octaves}")
-    print(f"Persistence: {persistence}")
-    print(f"Lacunarity: {lacunarity}")
-    print(f"Threshold: {threshold}")
-    print(f"Minimum cloud size: {min_cloud_size}")
-    print(f"Seed: {seed}")
+    # print("Generating Perlin noise with parameters:")
+    # print(f"Grid size: {grid_size}")
+    # print(f"Scale: {scale}")
+    # print(f"Octaves: {octaves}")
+    # print(f"Persistence: {persistence}")
+    # print(f"Lacunarity: {lacunarity}")
+    # print(f"Threshold: {threshold}")
+    # print(f"Minimum cloud size: {min_cloud_size}")
+    # print(f"Seed: {seed}")
     
     """
     Generate a 3D binary cloud map using Perlin noise with arbitrary grid dimensions.

@@ -98,9 +98,7 @@ def build_model_inputs(path_label_maps,
 
             # load input label map
             lab = utils.load_volume(path_label_maps[idx], dtype='int', aff_ref=np.eye(4))
-            print(lab.shape, np.unique(lab))
             lab = randomize_perlin_label(lab, target=0, layer=1)
-            print(lab.shape, np.unique(lab))
             # add label map to inputs
             list_label_maps.append(utils.add_axis(lab, axis=[0, -1]))
 

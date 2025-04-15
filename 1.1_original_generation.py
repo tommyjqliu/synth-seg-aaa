@@ -2,8 +2,6 @@ import os
 import numpy as np
 import nibabel as nib
 from SynthSeg.brain_generator import BrainGenerator
-import keras.backend as K
-from tensorflow.keras import backend as tK
 
 input_label_path = "data/uwa_aaa_combined"
 image_path = "data/Dataset001_aaa/imagesTr"
