@@ -95,7 +95,7 @@ def randomize_perlin_label(label, target = 0, layer = 1):
             octaves=randint(5, 7),
             persistence=uniform(0.4, 0.6),
             lacunarity=uniform(1.8, 2.2),
-            threshold=uniform(0.55, 0.65),
+            threshold=uniform(0.53, 0.63),
             min_cloud_size=randint(1000, 100000),
             seed=randint(0, 300)
             )
