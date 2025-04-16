@@ -91,12 +91,12 @@ def randomize_perlin_label(label, target = 0, layer = 1):
     for i in range(layer):
         perline_label = generate_perline_label(
             label.shape,
-            scale=uniform(4, 8),
+            scale=uniform(4, 10),
             octaves=randint(5, 7),
             persistence=uniform(0.4, 0.6),
             lacunarity=uniform(1.8, 2.2),
-            threshold=uniform(0.53, 0.63),
-            min_cloud_size=randint(1000, 100000),
+            threshold=uniform(0.50, 0.60),
+            min_cloud_size=randint(1000, 50000),
             seed=randint(0, 300)
             )
         output[(label == target) & (perline_label == 1)] = max_class + 1 + i
