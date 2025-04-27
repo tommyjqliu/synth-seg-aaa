@@ -91,7 +91,7 @@ def randomize_perlin_label(label, target = 0, layer = 1):
     for i in range(layer):
         perline_label = generate_perline_label(
             label.shape,
-            scale=uniform(4, 10),
+            scale=uniform(2, 10),
             octaves=randint(5, 7),
             persistence=uniform(0.4, 0.6),
             lacunarity=uniform(1.8, 2.2),

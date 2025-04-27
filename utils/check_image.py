@@ -47,9 +47,9 @@ def check_image(options: List[Dict]):
                 axes[i].set_title(opt.get("title", f"Image {i}"))
                 axes[i].axis("off")
 
-                cbar = plt.colorbar(im, ax=axes[i], fraction=0.046, pad=0.04)
-                if opt.get("is_label", False):
-                    cbar.set_label("Label Value")
+                # cbar = plt.colorbar(im, ax=axes[i], fraction=0.046, pad=0.04)
+                # if opt.get("is_label", False):
+                #     cbar.set_label("Label Value")
 
                 # Check if overlay exists and display it
                 overlay = opt.get("overlay", None)
