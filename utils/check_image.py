@@ -25,8 +25,8 @@ def check_image(options: List[Dict]):
         """
         # Assume first image defines the dimensions
         def display_slice(**kwargs):
-            fig_width_per_img = 4  # Width per image
-            fig_height = 4  # Fixed height
+            fig_width_per_img = 3  # Width per image
+            fig_height = 3  # Fixed height
             fig, axes = plt.subplots(
                 1, len(options), figsize=(fig_width_per_img * len(options), fig_height)
             )
@@ -68,7 +68,7 @@ def check_image(options: List[Dict]):
                     if opt.get("is_overlay_label", False):
                         overlay_cbar.set_label("Overlay Value")
 
-            plt.suptitle(f"NIfTI Image Slice {slice_idx}")
+            # plt.suptitle(f"NIfTI Image Slice {slice_idx}")
             plt.show()
 
         interact(
@@ -127,8 +127,8 @@ def check_image(options: List[Dict]):
             fig.canvas.draw_idle()
 
         # Set up figure
-        fig_width_per_img = 4
-        fig_height = 4
+        fig_width_per_img = 3
+        fig_height = 3
         fig, axes = plt.subplots(
             1, len(options), figsize=(fig_width_per_img * len(options), fig_height)
         )
